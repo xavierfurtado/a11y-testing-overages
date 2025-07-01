@@ -1,10 +1,22 @@
 import { StoryObj, Meta } from '@storybook/react'
 
+import { allModes } from '../../../.storybook/modes'
+
 import { Category } from './Category'
 
 const meta = {
   title: 'Components/Category',
   component: Category,
+  parameters: {
+    chromatic: {
+      modes: {
+        xs: allModes.xs,
+        s: allModes.s,
+        m: allModes.m,
+        l: allModes.l,
+      },
+    },
+  },
   args: {
     title: 'Pizza',
     photoUrl:

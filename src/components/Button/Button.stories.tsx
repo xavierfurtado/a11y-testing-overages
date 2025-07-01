@@ -1,10 +1,22 @@
 import { StoryObj, Meta } from '@storybook/react'
 
+import { allModes } from '../../../.storybook/modes'
+
 import { Button } from './Button'
 
 const meta = {
   title: 'Components/Button',
   component: Button,
+  parameters: {
+    chromatic: {
+      modes: {
+        xs: allModes.xs,
+        s: allModes.s,
+        m: allModes.m,
+        l: allModes.l,
+      },
+    },
+  },
   args: {
     children: 'Button',
   },

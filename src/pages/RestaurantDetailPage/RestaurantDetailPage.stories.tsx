@@ -6,6 +6,7 @@ import { expect } from '@storybook/test'
 import { BASE_URL } from '../../api'
 import { restaurants } from '../../stub/restaurants'
 import { cartItems } from '../../stub/cart-items'
+import { allModes } from '../../../.storybook/modes'
 import { withDeeplink } from '../../../.storybook/withDeeplink'
 
 import { RestaurantDetailPage } from './RestaurantDetailPage'
@@ -16,6 +17,14 @@ const meta = {
   decorators: [withDeeplink],
   parameters: {
     layout: 'fullscreen',
+    chromatic: {
+      modes: {
+        xs: allModes.xs,
+        s: allModes.s,
+        m: allModes.m,
+        l: allModes.l,
+      },
+    },
     deeplink: {
       route: '/restaurants/1',
       path: '/restaurants/:id',

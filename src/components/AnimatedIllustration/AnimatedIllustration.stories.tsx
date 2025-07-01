@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { AnimatedIllustration } from './AnimatedIllustration'
-
 const meta = {
   title: 'Components/AnimatedIllustration',
   component: AnimatedIllustration,

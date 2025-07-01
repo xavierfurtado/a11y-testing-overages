@@ -13,6 +13,10 @@ const meta = {
       modes: {
         light: allModes.light,
         dark: allModes.dark,
+        xs: allModes.xs,
+        s: allModes.s,
+        m: allModes.m,
+        l: allModes.l,
       },
     },
   },

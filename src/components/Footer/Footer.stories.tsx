@@ -7,6 +7,14 @@ const meta = {
   component: Footer,
   parameters: {
     layout: 'fullscreen',
+    chromatic: {
+      modes: {
+        xs: allModes.xs,
+        s: allModes.s,
+        m: allModes.m,
+        l: allModes.l,
+      },
+    },
   },
 } satisfies Meta<typeof Footer>
 

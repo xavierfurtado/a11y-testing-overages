@@ -3,6 +3,7 @@ import { http, HttpResponse } from 'msw'
 
 import { BASE_URL } from '../../api'
 import { restaurants } from '../../stub/restaurants'
+import { allModes } from '../../../.storybook/modes'
 
 import { HomePage } from './HomePage'
 
@@ -11,6 +12,14 @@ const meta = {
   component: HomePage,
   parameters: {
     layout: 'fullscreen',
+    chromatic: {
+      modes: {
+        xs: allModes.xs,
+        s: allModes.s,
+        m: allModes.m,
+        l: allModes.l,
+      },
+    },
     msw: {
       handlers: [http.get(BASE_URL, () => HttpResponse.json(restaurants))],
     },
