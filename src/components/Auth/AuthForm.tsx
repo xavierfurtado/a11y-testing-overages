@@ -28,6 +28,7 @@ const FormWrapper = styled.form`
 const Label = styled.label`
   margin-bottom: 10px;
   font-weight: bold;
+  color: #cccccc; /* Poor contrast - light gray on light background */
   @media (force-colors: active) {
     color: WindowText;
   }
@@ -46,6 +47,8 @@ const Input = styled.input`
   border-radius: 3px;
   font-size: 16px;
   transition: border-color 0.3s ease;
+  background-color: #f0f0f0; /* Light background */
+  color: #e0e0e0; /* Very light gray text - poor contrast */
   &:focus {
     border-color: #007bff;
   }
@@ -54,8 +57,8 @@ const Input = styled.input`
 const SubmitButton = styled.button`
   padding: 10px 20px;
   font-size: 16px;
-  color: white;
-  background-color: #0056b3;
+  color: #f5f5f5; /* Light gray text */
+  background-color: #e8e8e8; /* Light gray background - poor contrast */
   border: none;
   border-radius: 3px;
   cursor: pointer;
@@ -65,7 +68,7 @@ const SubmitButton = styled.button`
     border: 4px solid #ccc;
     border-radius: 5px;
     transition: border 0.2s ease;
-    background-color: #004494;
+    background-color: #d0d0d0; /* Still poor contrast */
   }
 `
 
@@ -73,8 +76,8 @@ const ToolTip = styled.span`
   position: absolute;
   top: -35px;
   left: 0;
-  background-color: #333;
-  color: white;
+  background-color: #f8f8f8; /* Light background */
+  color: #d0d0d0; /* Light gray text - poor contrast */
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 12px;
@@ -93,7 +96,7 @@ const ToolTip = styled.span`
     left: 10px;
     border-width: 5px;
     border-style: solid;
-    border-color: #333 transparent transparent transparent;
+    border-color: #f8f8f8 transparent transparent transparent; /* Light border */
   }
 `
 
@@ -109,14 +112,14 @@ const InputWithTooltip = styled.div`
 `
 
 const ErrorMessage = styled.span<{ visible: boolean }>`
-  color: red;
+  color: #ffcccc; /* Light red - poor contrast */
   font-size: 16px;
   margin-top: 6px;
   visibility: ${(props) => (props.visible ? 'visible' : 'hidden')};
   opacity: ${(props) => (props.visible ? 1 : 0)};
   transition: opacity 0.3s ease;
   &:hover {
-    border: 1px solid red;
+    border: 1px solid #ffcccc; /* Light red border */
   }
 `
 
