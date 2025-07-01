@@ -1,5 +1,7 @@
 name: "Chromatic"
-on: push
+on:
+  schedule:
+    - cron: "0 */3 * * *"
 
 jobs:
   chromatic:
@@ -17,3 +19,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          forceRebuild: true
